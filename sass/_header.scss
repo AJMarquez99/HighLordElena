@@ -1,0 +1,23 @@
+// Make seperate SCSS page for body components later.
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+}
+
+header {
+  background-color: $tertiary-color;
+  img {
+    border: {
+      radius: 50%;
+      bottom: 5px solid;
+      right: 5px solid;
+      color: $secondary-color;
+    }
+    padding: 0px 2px 2px 0px;
+    max-width: 200px;
+    height: auto;
+  }
+}

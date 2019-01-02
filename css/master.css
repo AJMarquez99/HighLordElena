@@ -1,0 +1,39 @@
+/*
+font-family: 'Happy Monkey', cursive;
+font-family: 'ZCOOL KuaiLe', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Special Elite', cursive;
+
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Cabin', sans-serif;
+
+font-family: 'Slabo 27px', serif;
+font-family: 'Arvo', serif;
+font-family: 'Kreon', serif;
+font-family: 'Podkova', serif;
+
+font-family: 'Libre Baskerville', serif;
+*/
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+}
+
+header {
+  background-color: #f542c5;
+}
+header img {
+  border-radius: 50%;
+  border-bottom: 5px solid;
+  border-right: 5px solid;
+  border-color: #f2f2f2;
+  padding: 0px 2px 2px 0px;
+  max-width: 200px;
+  height: auto;
+}
+
+/*# sourceMappingURL=master.css.map */
