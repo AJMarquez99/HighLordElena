@@ -72,6 +72,7 @@ header #banner_name {
   font-family: "Happy Monkey", cursive;
   font-size: 10em;
   line-height: 75px;
+  letter-spacing: 5px;
 }
 header a {
   color: #f2f2f2;
@@ -84,8 +85,8 @@ header a:hover {
 nav {
   background-color: #e1799c;
   color: #f2f2f2;
-  margin: 25px auto;
-  max-width: 720px;
+  margin: 30px auto 15px;
+  max-width: 790px;
   position: relative;
   left: 124px;
   font-family: "Source Sans Pro", sans-serif;
@@ -103,9 +104,9 @@ nav a {
   justify-content: center;
   align-items: center;
   padding: 7.5px 0;
-  color: #f2f2f2;
+  color: inherit;
   font-size: 2em;
-  letter-spacing: 8px;
+  letter-spacing: 10px;
   transition: letter-spacing 0.5s;
 }
 nav a:hover {
@@ -118,8 +119,13 @@ nav a:hover {
 section {
   margin: 0 auto;
   text-align: center;
-  max-width: 940px;
-  color: white;
+  max-width: 1015px;
+  color: #000;
+  background-color: #f2f2f2;
+  position: relative;
+  left: 10px;
+  z-index: -1;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=master.css.map */
