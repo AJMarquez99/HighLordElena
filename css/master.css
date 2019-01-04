@@ -124,11 +124,11 @@ section {
   padding-top: 20px;
 }
 
-div.main-blog {
+.main-blog {
   border-right: 2px solid #622277;
 }
 
-div.blog-post {
+.blog-post {
   display: flex;
   flex-direction: column;
   padding: 0 0 0 20px;
@@ -137,17 +137,20 @@ div.blog-post {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-div.blog-post h3 {
+.blog-post h3 {
   font-size: 4em;
   font-family: "Slabo 27px", serif;
   text-align: left;
   margin-bottom: 0;
 }
-div.blog-post:last-child {
+.blog-post:last-child {
   border: none;
 }
+.blog-post:not(:first-child) {
+  margin-top: 20px;
+}
 
-div.blog-info {
+.blog-info {
   text-align: left;
   padding: 2px 0 0 10px;
 }
@@ -169,19 +172,29 @@ div.blog-info {
   content: "Comments: 3";
 }
 
-div.post-image {
-  margin-left: 10px;
-  margin-bottom: 20px;
+.post-image {
+  margin: 0 30px 20px 10px;
   text-align: left;
   max-width: 100%;
   max-height: 500px;
 }
-div.post-image img {
+.post-image img {
   width: auto;
   height: auto;
   max-height: inherit;
   max-width: inherit;
   border-radius: 5px;
+}
+
+.blog-text {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-family: "Libre Baskerville", serif;
+}
+.blog-text p {
+  text-align: justify;
+  line-height: 1.7em;
 }
 
 /*# sourceMappingURL=master.css.map */
