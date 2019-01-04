@@ -1,12 +1,7 @@
 /*
 font-family: 'Happy Monkey', cursive;
-font-family: 'ZCOOL KuaiLe', cursive;
-font-family: 'Press Start 2P', cursive;
-font-family: 'Special Elite', cursive;
-
-font-family: 'Source Sans Pro', sans-serif;
-font-family: 'Dosis', sans-serif;
 font-family: 'Cabin', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
 
 font-family: 'Slabo 27px', serif;
 font-family: 'Arvo', serif;
@@ -71,7 +66,7 @@ header div.banner {
 header #banner_name {
   font-family: "Happy Monkey", cursive;
   font-size: 10em;
-  line-height: 75px;
+  line-height: 71px;
   letter-spacing: 5px;
 }
 header a {
@@ -89,7 +84,7 @@ nav {
   max-width: 790px;
   position: relative;
   left: 124px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Cabin", sans-serif;
   border-radius: 5px;
 }
 nav ul {
@@ -120,16 +115,73 @@ section {
   margin: 0 auto;
   text-align: center;
   max-width: 1015px;
-  color: #000;
+  color: #262626;
   background-color: #f2f2f2;
   position: relative;
   left: 10px;
   z-index: -1;
   border-radius: 10px;
+  padding-top: 20px;
+}
+
+div.main-blog {
+  border-right: 2px solid #622277;
 }
 
 div.blog-post {
-  border-right: 2px solid #622277;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 20px;
+  color: #262626;
+  border-bottom: 2px solid #a6a6a6;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+div.blog-post h3 {
+  font-size: 4em;
+  font-family: "Slabo 27px", serif;
+  text-align: left;
+  margin-bottom: 0;
+}
+div.blog-post:last-child {
+  border: none;
+}
+
+div.blog-info {
+  text-align: left;
+  padding: 2px 0 0 10px;
+}
+
+.author, .comment_number, .date_posted {
+  margin-right: 10px;
+  font-size: 1.3em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.author::before, .comment_number::before, .date_posted::before {
+  content: "From: HighLordElena";
+}
+
+.date_posted::before {
+  content: "Posted: 01/05/19";
+}
+
+.comment_number::before {
+  content: "Comments: 3";
+}
+
+div.post-image {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 100%;
+  max-height: 500px;
+}
+div.post-image img {
+  width: auto;
+  height: auto;
+  max-height: inherit;
+  max-width: inherit;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=master.css.map */
