@@ -1,0 +1,55 @@
+.posting-container {
+  text-align: left;
+  margin-left: 20px;
+  h2 {
+    margin: 10px 0px 10px 0px;
+    font: {
+      size: 5em;
+      family: $heading-font;
+    }
+  }
+  p {
+    font: {
+      size: 1.3em;
+      family: $text-font;
+    }
+  }
+}
+
+.posting-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+  max-width: 50%;
+  .input-blocks {
+    margin: 15px 0 0 0;
+    label {
+      max-width: 30%;
+      width: auto;
+      font: {
+        size: 1.7em;
+        family: $text-font;
+      }
+    }
+    input[type=text], input[type=email] {
+      max-width: 80%;
+      width: auto;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.5em;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin: 15px 0 15px 0;
+      resize: none;
+      height: 150px;
+      font: {
+        size: 1.5em;
+      }
+    }
+  }
+}

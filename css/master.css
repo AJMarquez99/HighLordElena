@@ -131,7 +131,7 @@ section {
 .blog-post {
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 0;
+  padding: 0 0 0 20px;
   color: #262626;
   border-bottom: 2px solid #a6a6a6;
   border-bottom-left-radius: 2px;
@@ -195,6 +195,54 @@ section {
 .blog-text p {
   text-align: justify;
   line-height: 1.7em;
+}
+
+.posting-container {
+  text-align: left;
+  margin-left: 20px;
+}
+.posting-container h2 {
+  margin: 10px 0px 10px 0px;
+  font-size: 5em;
+  font-family: "Slabo 27px", serif;
+}
+.posting-container p {
+  font-size: 1.3em;
+  font-family: "Libre Baskerville", serif;
+}
+
+.posting-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+  max-width: 50%;
+}
+.posting-form .input-blocks {
+  margin: 15px 0 0 0;
+}
+.posting-form .input-blocks label {
+  max-width: 30%;
+  width: auto;
+  font-size: 1.7em;
+  font-family: "Libre Baskerville", serif;
+}
+.posting-form .input-blocks input[type=text], .posting-form .input-blocks input[type=email] {
+  max-width: 80%;
+  width: auto;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+.posting-form .input-blocks textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 0 15px 0;
+  resize: none;
+  height: 150px;
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=master.css.map */

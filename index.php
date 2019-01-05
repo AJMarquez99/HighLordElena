@@ -2,7 +2,7 @@
   $page_title = "Home";
   include ('components/header.html');
 ?>
-<div class="col-sm-12 col-md-9 mt-md-5 mb-md-5 main-blog">
+<div class="col-sm-12 col-md-9 mt-md-3 mb-md-5 main-blog">
   <div class="blog-post">
     <h3>Why I Decided to Make a Site</h3>
     <div class="blog-info"><span class="author"></span><span class="date_posted"></span><span class="comment_number"></span></div><br />
