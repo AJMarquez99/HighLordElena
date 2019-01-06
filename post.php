@@ -14,15 +14,15 @@
     </div>
     <div class="input-blocks">
       <label for="media">Image/Video:</label>
-      <input type="text" name="media" id="media" value="" />
+      <input type="file" name="media" id="media" value="" />
     </div>
     <div class="input-blocks">
       <label for="desc">Description:</label>
       <input type="text" name="media" id="media" value="" />
     </div>
     <textarea name="content" id="content" placeholder="Thoughts?"></textarea>
-    <div class="input-blocks submit-button">
-      <input type="submit" name="submit" id="submit" value="submit" />
+    <div class="input-blocks">
+      <input type="submit" name="submit" id="submit" value="Post" />
     </div>
   </form>
 </div>

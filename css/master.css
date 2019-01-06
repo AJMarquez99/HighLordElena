@@ -35,6 +35,8 @@ header {
   max-height: 120px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  position: relative;
+  z-index: 2;
 }
 header div.temp-container {
   position: relative;
@@ -52,11 +54,13 @@ header div.temp-container {
   height: 210px;
 }
 header img {
+  position: relative;
   border-radius: 50%;
   transform: rotate(-45deg);
   max-width: 200px;
   height: auto;
   padding: 0;
+  z-index: 5;
 }
 header div.banner {
   display: inline-block;
@@ -119,7 +123,6 @@ section {
   background-color: #f2f2f2;
   position: relative;
   left: 10px;
-  z-index: -1;
   border-radius: 10px;
   padding-top: 40px;
 }
@@ -215,7 +218,7 @@ section {
   display: flex;
   flex-direction: column;
   margin: 0 0 20px 0;
-  max-width: 50%;
+  max-width: 75%;
 }
 .posting-form .input-blocks {
   margin: 15px 0 0 0;
@@ -226,23 +229,58 @@ section {
   font-size: 1.7em;
   font-family: "Libre Baskerville", serif;
 }
-.posting-form .input-blocks input[type=text], .posting-form .input-blocks input[type=email] {
+.posting-form .input-blocks input[type=text], .posting-form .input-blocks input[type=file] {
   max-width: 80%;
   width: auto;
   padding: 5px;
-  border: none;
+  border: 1px solid #8c8c8c;
   border-radius: 5px;
   font-size: 1.5em;
 }
-.posting-form .input-blocks textarea {
+.posting-form .input-blocks input[type=text]:focus, .posting-form .input-blocks input[type=file]:focus {
+  outline: none;
+}
+.posting-form .input-blocks input[type=file] {
+  border: none;
+}
+.posting-form .input-blocks input[type=submit] {
+  margin-left: 10px;
+  font-size: 1.7em;
+  border: none;
+  background-color: #622277;
+  padding: 5px 15px;
+  border-radius: 3px;
+  color: #fff;
+  transition: box-shadow 0.125s, transform 0.125s;
+}
+.posting-form .input-blocks input[type=submit]:hover {
+  box-shadow: 0px 0px 0px #737373, 0px 1px 0px #737373, 0px 2px 0px #737373, 0px 3px 0px #737373, 0px 4px 0px #737373;
+  transform: translate(0, -4px);
+  transition: box-shadow 0.125s, transform 0.125s;
+}
+.posting-form .input-blocks input[type=submit]:active {
+  box-shadow: 0px 0px 0px #737373;
+  transform: translate(0, 0px);
+}
+.posting-form .input-blocks input[type=submit]:focus {
+  outline: none;
+}
+.posting-form textarea {
   width: 100%;
   padding: 10px;
-  border: none;
+  border: 1px solid #8c8c8c;
   border-radius: 5px;
-  margin: 15px 0 15px 0;
+  margin: 15px 0 0px 0;
   resize: none;
   height: 150px;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  overflow-y: scroll;
+}
+.posting-form textarea::-webkit-scrollbar {
+  display: none;
+}
+.posting-form textarea:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=master.css.map */
