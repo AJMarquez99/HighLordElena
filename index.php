@@ -1,6 +1,6 @@
 <?php
   $page_title = "Home";
-  include ('components/header.html');
+  include ('components/_header.html');
 ?>
 <div class="col-sm-12 col-md-9 mt-md-3 mb-md-5 main-blog">
   <div class="blog-post">
@@ -42,5 +42,5 @@
 
 </div>
 <?php
-  include ('components/footer.html');
+  include ('components/_footer.html');
 ?>

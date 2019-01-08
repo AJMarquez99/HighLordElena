@@ -1,6 +1,6 @@
 <?php
   $page_title = "Create Post";
-  include ('components/header.html');
+  include ('components/_header.html');
 ?>
 <div class="col posting-container">
   <h2>Make New Post</h2>
@@ -27,5 +27,5 @@
   </form>
 </div>
 <?php
-  include ('components/footer.html');
+  include ('components/_footer.html');
 ?>
