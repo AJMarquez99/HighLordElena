@@ -283,4 +283,35 @@ section {
   outline: none;
 }
 
+.about img {
+  height: auto;
+  max-width: 400px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.about .img-container[class^=col] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.about .img-container {
+  display: inline-block;
+  border: 5px solid #622277;
+  border-radius: 5px;
+  width: auto;
+  height: auto;
+}
+.about h3 {
+  font-size: 4.5em;
+  font-family: "Slabo 27px", serif;
+}
+.about p {
+  line-height: 2em;
+  text-align: justify;
+  text-align-last: center;
+  font-size: 1.5em;
+  font-family: "Libre Baskerville", serif;
+}
+
 /*# sourceMappingURL=master.css.map */

@@ -1,0 +1,36 @@
+.about {
+  img {
+    height: auto;
+    max-width: 400px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  .img-container[class^="col"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  .img-container {
+    display: inline-block;
+    border: 5px solid $accent-color;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+  }
+  h3 {
+    font: {
+      size: 4.5em;
+      family: $heading-font;
+    }
+  }
+  p {
+    line-height: 2em;
+    text-align: justify;
+    text-align-last: center;
+    font: {
+      size: 1.5em;
+      family: $text-font;
+    }
+  }
+}
