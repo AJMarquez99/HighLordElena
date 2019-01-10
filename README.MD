@@ -11,3 +11,5 @@ I'm Building this site in order to learn SASS, PHP, and Javascript as well as to
 * SASS - Main CSS for specific design
 * PHP - Backend language to run blog
 * MySQL - For handling blog post as well as members and comments.
+* Ekko Lightbox - Used a Bootstrap plugin for art page gallery.
+  * [AshleyDW](http://ashleydw.github.io/lightbox/)
