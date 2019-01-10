@@ -314,4 +314,8 @@ section {
   font-family: "Libre Baskerville", serif;
 }
 
+.art-favorites {
+  max-height: 500px;
+}
+
 /*# sourceMappingURL=master.css.map */
