@@ -1,4 +1,4 @@
-# [HighLordElena](https://ajmarquez99.github.io/HighLordElena/)
+# HighLordElena
 A sort of blog site for the selling and commissioning of art by the artist known as HighLordElena. The website will go live once finished.
 
 ## Motivation
