@@ -1,5 +1,5 @@
 # HighLordElena
-A sort of blog site for the selling and commissioning of art by the artist known as HighLordElena. The website will go live once finished.
+A blog site for the selling and commissioning of art by the artist known as HighLordElena. The website will go live once finished.
 
 ## Motivation
 I'm Building this site in order to learn SASS, PHP, and Javascript as well as to get better Bootstrap and general web design.
