@@ -453,4 +453,14 @@ section {
   right: 0;
 }
 
+.contact-page .input-block {
+  display: flex;
+  flex-direction: column;
+  font-family: "Indie Flower", cursive;
+}
+.contact-page .input-block input {
+  border: none;
+  background: unset;
+}
+
 /*# sourceMappingURL=master.css.map */
