@@ -115,6 +115,17 @@ nav a:hover {
   transition: letter-spacing 0.5s;
 }
 
+@keyframes slowlyDisplay {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 section {
   margin: 0 auto;
   text-align: center;
@@ -125,6 +136,7 @@ section {
   left: 10px;
   border-radius: 10px;
   padding-top: 40px;
+  animation: slowlyDisplay 2s 1 forwards;
 }
 
 .main-blog {
@@ -453,14 +465,53 @@ section {
   right: 0;
 }
 
+.contact-page h3 {
+  font-size: 2em;
+}
+.contact-page form {
+  font-family: "Handlee", cursive;
+  font-size: 2em;
+  margin-top: 30px;
+}
+.contact-page .form-message {
+  padding-right: 50px;
+}
 .contact-page .input-block {
   display: flex;
   flex-direction: column;
-  font-family: "Indie Flower", cursive;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+.contact-page .input-block:last-child {
+  margin-bottom: 0;
+}
+.contact-page .input-block label {
+  text-align: left;
+  margin-bottom: 5px;
 }
 .contact-page .input-block input {
   border: none;
-  background: unset;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: #353d5a;
+  padding: 5px 10px;
+  font-size: 0.75em;
+  outline: none;
+}
+.contact-page textarea {
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: #353d5a;
+  padding: 15px;
+  font-size: 0.75em;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  resize: none;
+}
+.contact-page textarea::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=master.css.map */
