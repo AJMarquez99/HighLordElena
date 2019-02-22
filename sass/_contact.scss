@@ -1,11 +1,52 @@
 .contact-page {
+  form {
+    margin-top: 50px;
+  }
+  .col-7 {
+    padding-right: 60px;
+    background-image: url(../images/pencil_formContent.png)!important;
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+  }
   .input-block {
+    margin: 0 30px;
     display: flex;
     flex-direction: column;
     font-family: $form-font;
+    font-size: 2em;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    label {
+      text-align: left;
+    }
     input {
       border: none;
-      background: unset;
+      background-color: unset;
+      background-image: url(../images/pencil_form.png)!important;
+      background-size: contain!important;
+      background-repeat: no-repeat!important;
+      padding: 0 20px;
+      height: 50px;
+      width: 270px;
+      font-size: 0.75em;
+      outline: none;
+    }
+  }
+  textarea {
+    font-family: $form-font;
+    font-size: 1.5em;
+    resize: none;
+    width: 580px;
+    height: 85%;
+    background-color: unset;
+    border: none;
+    margin: 17px;
+    outline: none;
+    line-height: 2em;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }

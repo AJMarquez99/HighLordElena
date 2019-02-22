@@ -453,14 +453,55 @@ section {
   right: 0;
 }
 
+.contact-page form {
+  margin-top: 50px;
+}
+.contact-page .col-7 {
+  padding-right: 60px;
+  background-image: url(../images/pencil_formContent.png) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
 .contact-page .input-block {
+  margin: 0 30px;
   display: flex;
   flex-direction: column;
-  font-family: "Indie Flower", cursive;
+  font-family: "Handlee", cursive;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+.contact-page .input-block:last-child {
+  margin-bottom: 0;
+}
+.contact-page .input-block label {
+  text-align: left;
 }
 .contact-page .input-block input {
   border: none;
-  background: unset;
+  background-color: unset;
+  background-image: url(../images/pencil_form.png) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  padding: 0 20px;
+  height: 50px;
+  width: 270px;
+  font-size: 0.75em;
+  outline: none;
+}
+.contact-page textarea {
+  font-family: "Handlee", cursive;
+  font-size: 1.5em;
+  resize: none;
+  width: 580px;
+  height: 85%;
+  background-color: unset;
+  border: none;
+  margin: 17px;
+  outline: none;
+  line-height: 2em;
+}
+.contact-page textarea::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=master.css.map */
