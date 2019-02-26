@@ -1,4 +1,5 @@
 .contact-page {
+  $form-background: lighten($primary-color, 10%);
   h3 {
     font-size: 2em;
   }
@@ -26,7 +27,7 @@
       border: none;
       border-radius: 5px;
       color: #FFF;
-      background-color: lighten($primary-color, 10%);
+      background-color: $form-background;
       padding: 5px 10px;
       font-size: 0.75em;
       outline: none;
@@ -36,7 +37,7 @@
     border: none;
     border-radius: 5px;
     color: #FFF;
-    background-color: lighten($primary-color, 10%);
+    background-color: $form-background;
     padding: 15px;
     font-size: 0.75em;
     outline: none;
@@ -45,6 +46,21 @@
     resize: none;
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+  input[type="submit"] {
+    border: none;
+    border-radius: 5px;
+    background-color: $form-background;
+    padding: 10px;
+    margin-top: 50px;
+    color: #FFF;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &, &:hover {
+      transition: transform 0.5s;
     }
   }
 }

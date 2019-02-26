@@ -14,16 +14,21 @@
           </div>
           <div class="input-block">
             <label>Phone Number:</label>
-            <input type="email" name="email" id="email" />
+            <input type="text" name="phone_number" id="phone_number" autocomplete="new-password" />
           </div>
           <div class="input-block">
             <label>Email:</label>
-            <input type="text" name="email" id="email" />
+            <input type="text" name="email" id="email" autocomplete="new-password" />
           </div>
         </div>
         <div class="col-8 form-message">
           <textarea name="content" id="content" placeholder="Whatever you'd like to say."></textarea>
         </div>
+      </div>
+      <div class="row">
+          <div class="col">
+            <input type="submit" name="submit" value="Submit" />
+          </div>
       </div>
     </form>
   </div>

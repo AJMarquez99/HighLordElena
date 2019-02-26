@@ -513,5 +513,20 @@ section {
 .contact-page textarea::-webkit-scrollbar {
   display: none;
 }
+.contact-page input[type=submit] {
+  border: none;
+  border-radius: 5px;
+  background-color: #353d5a;
+  padding: 10px;
+  margin-top: 50px;
+  color: #FFF;
+  cursor: pointer;
+}
+.contact-page input[type=submit]:hover {
+  transform: scale(1.05);
+}
+.contact-page input[type=submit], .contact-page input[type=submit]:hover {
+  transition: transform 0.5s;
+}
 
 /*# sourceMappingURL=master.css.map */
