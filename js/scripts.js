@@ -36,39 +36,78 @@ function validateEmail(email) {
 }
 
 function formValidation() {
-  let inputBlock = $(this);
-  let inputName = inputBlock.attr("id");
-  debugger;
-  switch (inputName) {
-    case "name":
-      if ( !inputBlock.val() ) {
-        inputBlock[0].style.border = "2px solid red";
-        inputBlock[0].style.boxShadow = "0px 0px 5px red";
-      } else {
-        inputBlock[0].style.textTransform = "Capitalize";
-        inputBlock[0].style.border = "2px solid #008000";
-        inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
-      }
-      break;
-    case "phone_number":
-      if ( !inputBlock.val() || inputBlock.val().length != 9 ) {
-        inputBlock[0].style.border = "2px solid red";
-        inputBlock[0].style.boxShadow = "0px 0px 5px red";
-      } else {
-        inputBlock[0].style.border = "2px solid #008000";
-        inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
-      }
-      break;
-    case "email":
-      if ( !inputBlock.val() || !validateEmail( inputBlock.val() )  ) {
-        inputBlock[0].style.border = "2px solid red";
-        inputBlock[0].style.boxShadow = "0px 0px 5px red";
-      } else {
-        inputBlock[0].style.border = "2px solid #008000";
-        inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
-      }
-      break;
+  let formOk = true;
+  for ( let inputBlock of $("input") ) {
+    let inputValueType = inputBlock.attr("id");
+    switch (inputValueType) {
+      case "name":
+        if ( !inputBlock.val() ) {
+          inputBlock[0].style.border = "2px solid red";
+          inputBlock[0].style.boxShadow = "0px 0px 5px red";
+        } else {
+          inputBlock[0].style.textTransform = "Capitalize";
+          inputBlock[0].style.border = "2px solid #008000";
+          inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
+        }
+        break;
+      case "phone_number":
+        if ( !inputBlock.val() || inputBlock.val().length != 9 ) {
+          inputBlock[0].style.border = "2px solid red";
+          inputBlock[0].style.boxShadow = "0px 0px 5px red";
+        } else {
+          inputBlock[0].style.border = "2px solid #008000";
+          inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
+        }
+        break;
+      case "email":
+        if ( !inputBlock.val() || !validateEmail( inputBlock.val() )  ) {
+          inputBlock[0].style.border = "2px solid red";
+          inputBlock[0].style.boxShadow = "0px 0px 5px red";
+        } else {
+          inputBlock[0].style.border = "2px solid #008000";
+          inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
+        }
+        break;
+    }
   }
+  if ()
 }
 
-$("input").blur(formValidation);
+$("input[name='phone_number']").keyup(function() {
+  var val_old = $(this).val();
+  var val = val_old.replace(/\D/g, '');
+  var len = val.length;
+  if (len >= 1)
+    val = '(' + val.substring(0);
+  if (len >= 3)
+    val = val.substring(0, 4) + ') ' + val.substring(4);
+  if (len >= 6)
+    val = val.substring(0, 9) + '-' + val.substring(9);
+	if (len > 10)
+		val = val.substring(0, 14);
+  if (val != val_old)
+    $(this).focus().val('').val(val);
+});
+
+$("input[name='phone_number']").on("keypress keyup blur",function (event) {
+	$(this).val($(this).val().replace(/[^\d()-\s].+/, ""));
+	if ((event.which < 48 || event.which > 57)) {
+		 event.preventDefault();
+	}
+	if ($(this).val().length > 13) {
+		 event.preventDefault();
+	}
+});
+
+$("input[name='name']").on("keypress keyup blur",function (event) {
+	$(this).val($(this).val().replace(/[^A-Za-z'-\s]+/, ""));
+  let inputValue = event.which;
+  if ( !(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0 && inputValue != 45 && inputValue != 39)) {
+      event.preventDefault();
+  }
+  if ($(this).val().length > 30 ) {
+    event.preventDefault();
+  }
+});
+
+$("form").on("submit", formValidation);
