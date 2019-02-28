@@ -1,33 +1,62 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+function createGalleryArrows(arrowDirection) {
+  let arrow = document.createElement("button");
+  let direction = document.createTextNode(arrowDirection);
+  arrow.append(direction);
+  return arrow;
+}
+
+function createGallery() {
+  let galleryContainer = $("#slideshow_container");
+  let rightArrow = createGalleryArrows("›");
+  let leftArrow = createGalleryArrows("‹");
+  galleryContainer.append(rightArrow);
+  galleryContainer.append(leftArrow);
+
+  rightArrow.classList.add("next");
+  leftArrow.classList.add("prev");
+
+  $('.prev').click(function() {
+    plusSlides(-1);
+  });
+  $('.next').click(function() {
+    plusSlides(1);
+  });
+
+  for ( let galleryImage of $(".mySlides") ) {
+    let imgBlock = document.createElement("img");
+    let imgSrc = galleryImage.getAttribute("data-img-src");
+    imgBlock.setAttribute("src", imgSrc);
+    galleryImage.append(imgBlock);
+  }
+}
+
+//Gallery Controls
+let slideIndex = 1;
+
 
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function showSlides(n) {
+  let i;
+  let slides = $(".mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  slides[slideIndex-1].classList.add("active");
 }
 
-function showSlides(n) {
-  if ( document.getElementsByClassName("mySlides").length > 0) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+$(".mySlides").ready( function() {
+  if ( $(".mySlides").length > 0 ) {
+
+    showSlides(slideIndex);
+    createGallery();
   }
-}
+});
 
 //Form Validation
 function validateEmail(email) {
@@ -37,40 +66,38 @@ function validateEmail(email) {
 
 function formValidation() {
   let formOk = true;
+  let errorMessage = "";
   for ( let inputBlock of $("input") ) {
-    let inputValueType = inputBlock.attr("id");
+    let inputValueType = inputBlock.id;
     switch (inputValueType) {
       case "name":
-        if ( !inputBlock.val() ) {
-          inputBlock[0].style.border = "2px solid red";
-          inputBlock[0].style.boxShadow = "0px 0px 5px red";
-        } else {
-          inputBlock[0].style.textTransform = "Capitalize";
-          inputBlock[0].style.border = "2px solid #008000";
-          inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
+        if ( !inputBlock.value ) {
+          formOk = false;
+          errorMessage += "Please Enter your Name\n";
         }
         break;
       case "phone_number":
-        if ( !inputBlock.val() || inputBlock.val().length != 9 ) {
-          inputBlock[0].style.border = "2px solid red";
-          inputBlock[0].style.boxShadow = "0px 0px 5px red";
-        } else {
-          inputBlock[0].style.border = "2px solid #008000";
-          inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
+        if ( !inputBlock.value || inputBlock.value.length != 14 ) {
+          formOk = false;
+          errorMessage += "Please Enter a valid Phone Number\n";
         }
         break;
       case "email":
-        if ( !inputBlock.val() || !validateEmail( inputBlock.val() )  ) {
-          inputBlock[0].style.border = "2px solid red";
-          inputBlock[0].style.boxShadow = "0px 0px 5px red";
-        } else {
-          inputBlock[0].style.border = "2px solid #008000";
-          inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
+        if ( !inputBlock.value || !validateEmail( inputBlock.value )  ) {
+          formOk = false;
+          errorMessage += "Please Enter a valid Email\n";
         }
         break;
     }
   }
-  if ()
+  if ( !$("#content").val() ) {
+    formOk = false;
+    errorMessage += "Were you planning on typing a message?\n";
+  }
+  if ( formOk == false ) {
+    event.preventDefault();
+    alert(errorMessage);
+  }
 }
 
 $("input[name='phone_number']").keyup(function() {
@@ -110,4 +137,4 @@ $("input[name='name']").on("keypress keyup blur",function (event) {
   }
 });
 
-$("form").on("submit", formValidation);
+$("#contact-form").submit( formValidation );

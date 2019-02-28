@@ -1,11 +1,15 @@
 <?php
   $page_title = "Art";
   include ('components/_header.html');
+  $formValid = false;
 ?>
 <div class="col contact-page">
   <div class="row mb-5 flex-column">
     <h3>Interested in some of the artwork or want your own personal piece, let me know by filling out the for below.</h3>
-    <form>
+    <?php
+      //  if ( formValid ) ? echo "Thank you!": echo "Please Enter valid info";
+    ?>
+    <form  method="post" id="contact-form">
       <div class="row">
         <div class="col-4">
           <div class="input-block">
