@@ -115,6 +115,17 @@ nav a:hover {
   transition: letter-spacing 0.5s;
 }
 
+@keyframes slowlyDisplay {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 section {
   margin: 0 auto;
   text-align: center;
@@ -125,6 +136,7 @@ section {
   left: 10px;
   border-radius: 10px;
   padding-top: 40px;
+  animation: slowlyDisplay 2s 1 forwards;
 }
 
 .main-blog {
@@ -283,6 +295,10 @@ section {
   outline: none;
 }
 
+.about .row {
+  justify-content: center;
+  align-items: center;
+}
 .about img {
   height: auto;
   max-width: 400px;
@@ -312,6 +328,142 @@ section {
   text-align-last: center;
   font-size: 1.5em;
   font-family: "Libre Baskerville", serif;
+}
+
+.art-favorites {
+  max-height: 800px;
+  /* Slideshow container */
+}
+.art-favorites h3 {
+  font-family: "Slabo 27px", serif;
+  font-size: 3em;
+}
+.art-favorites .slideshow-container {
+  width: 90%;
+  margin: 30px auto;
+  position: relative;
+  padding-bottom: 0;
+}
+.art-favorites .slideshow-container .mySlides {
+  display: none;
+  background-color: #323232;
+}
+.art-favorites .slideshow-container .active {
+  display: flex;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.art-favorites .slideshow-container .active img {
+  width: auto;
+  height: 100%;
+}
+.art-favorites .slideshow-container button {
+  background: unset;
+  border: none;
+  font-size: 3em;
+  color: #FFF;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  height: 100%;
+  width: 80px;
+}
+.art-favorites .slideshow-container button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.art-favorites .slideshow-container .next {
+  left: unset;
+  right: 0;
+}
+
+.art-gallery {
+  padding-bottom: 20px;
+}
+.art-gallery img {
+  padding: 10px 0;
+}
+
+.ekko-lightbox-nav-overlay a {
+  background-color: rgba(100, 100, 100, 0.35);
+  justify-content: center;
+  width: min-content;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ekko-lightbox-nav-overlay a:nth-child(2) {
+  left: unset;
+  right: 0;
+}
+
+.contact-page h3 {
+  font-size: 2em;
+}
+.contact-page form {
+  font-family: "Handlee", cursive;
+  font-size: 2em;
+  margin-top: 30px;
+}
+.contact-page .form-message {
+  padding-right: 50px;
+}
+.contact-page .input-block {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+.contact-page .input-block:last-child {
+  margin-bottom: 0;
+}
+.contact-page .input-block label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+.contact-page .input-block input {
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: #353d5a;
+  padding: 5px 10px;
+  font-size: 0.75em;
+}
+.contact-page textarea {
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: #353d5a;
+  padding: 15px;
+  font-size: 0.75em;
+  height: 100%;
+  width: 100%;
+  resize: none;
+}
+.contact-page textarea::-webkit-scrollbar {
+  display: none;
+}
+.contact-page input[type=submit] {
+  border: none;
+  border-radius: 5px;
+  background-color: #353d5a;
+  padding: 10px;
+  margin-top: 50px;
+  color: #FFF;
+  cursor: pointer;
+}
+.contact-page input[type=submit]:hover {
+  transform: scale(1.05);
+}
+.contact-page input[type=submit], .contact-page input[type=submit]:hover {
+  transition: transform 0.5s;
 }
 
 /*# sourceMappingURL=master.css.map */
