@@ -11,15 +11,15 @@
         <div class="col-4">
           <div class="input-block">
             <label>Name:</label>
-            <input type="text" name="c_name" id="c_name" autocomplete="new-password"/>
+            <input type="text" name="name" id="name" autocomplete="new-password"/>
           </div>
           <div class="input-block">
             <label>Phone Number:</label>
-            <input type="text" name="c_phone_number" id="c_phone_number" autocomplete="new-password"/>
+            <input type="text" name="phone_number" id="phone_number" autocomplete="new-password"/>
           </div>
           <div class="input-block">
             <label>Email:</label>
-            <input type="email" name="c_email" id="c_email" autocomplete="new-password" />
+            <input type="email" name="email" id="email" autocomplete="new-password" />
           </div>
         </div>
         <div class="col-7 d-flex justify-content-center">
