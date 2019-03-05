@@ -1,3 +1,15 @@
+@keyframes slowlyDisplay {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 section {
   margin: 0 auto;
   text-align: center;
@@ -8,4 +20,5 @@ section {
   left: 10px;
   border-radius: 10px;
   padding-top: 40px;
+  animation: slowlyDisplay 2s 1 forwards;
 }
